@@ -14,7 +14,7 @@ The goal is to predict career average PTS based on pre-NBA attributes, such as h
 
 ### Key Findings
 
-- **Model Performance**: Current models (FNN: RMSE = 2.604043, R² = -0.099646; CNN: RMSE = 2.582621, R² = -0.081628; XGBoost: RMSE = 2.506526, R² = -0.018829) underperform, with negative R² values indicating predictions are worse than the mean PTS. XGBoost shows the best performance but is still inadequate.
+- **Model Performance**: Current models (FNN: RMSE = 4.228042, R² = -1.898912; CNN: RMSE = 4.255535, R² = -0.003362; XGBoost: RMSE = 2.487427, R² = -0.003362) underperform, with negative R² values indicating predictions are worse than the mean PTS. XGBoost shows the best performance but is still inadequate.
 - **Feature Importance**: Features like `POSITION_SCORE` and `DRAFT_YEAR_NORM` have limited predictive power for PTS.
 - **Limitations**: The dataset lacks performance metrics (e.g., minutes played, shooting efficiency), and restrictive filtering (PTS: 2–20) reduces data diversity (973 training samples).
 - **Future Work**: Incorporate features like `DRAFT_NUMBER`, relax filtering, and explore simpler models or additional data sources.
@@ -34,9 +34,9 @@ The dataset (`PlayerIndex_nba_stats.csv`) contains NBA player attributes and sea
 ## Results
 
 The current models underperform due to weak feature correlations and a small dataset:
-- **FNN**: RMSE = 2.604043, R² = -0.099646
-- **CNN**: RMSE = 2.582621, R² = -0.081628
-- **XGBoost**: RMSE = 2.506526, R² = -0.018829
+- **FNN**: RMSE = 4.228042, R² = -1,898912
+- **CNN**: RMSE = 4.255535, R² = -0.003362
+- **XGBoost**: RMSE = 2.487427, R² = -0.003362
 
 Negative R² values indicate the models predict worse than the mean PTS. XGBoost performs best but is limited by feature quality. Visualizations (e.g., `correlation_matrix.png`, `pts_distribution.png`) and diagnostics suggest low feature-PTS correlations and a narrow PTS range (5–14.9).
 
